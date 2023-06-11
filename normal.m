@@ -11,6 +11,6 @@ data = struct('A', sparse(Problem.A), 'b', full(Problem.b), 'c', full(Problem.c)
 
 
 
-params = struct();
+params = struct('METHOD', 2, 'extra_verbose', true);
 
 [x,y,s,info] = abip(data,params);

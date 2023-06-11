@@ -61,7 +61,7 @@ classdef normal_config  < model_interface
                 
                 y(m+1:m+n)      = -rhs(m+1:m+n) + obj.AT_times(y(1:m));
             else
-                y               = (w.L'\(w.d\(w.L\rhs(w.P))));
+                y               = (w.L'\(w.d\(w.L\rhs(w.P)))); %this is where the LDL comes in  
                 y(w.P)          = y;
             end
         end

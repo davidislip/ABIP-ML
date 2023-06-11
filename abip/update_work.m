@@ -53,7 +53,9 @@ function [data, work, barrier, residual]=update_work(data,work,setting)
        
        %% calculate h g g'h
       [h, g, gTh] = solve_for_g(data, work, setting);
-
+      %h is h in equation 73 of the paper 
+      %g = M-{-1}h 
+      %decompose this part? %solve for g
       final_check = 0;
       double_check=0;
       mu=1;
